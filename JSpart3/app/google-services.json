@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "196703684025",
+    "firebase_url": "https://js-part-3.firebaseio.com",
+    "project_id": "js-part-3",
+    "storage_bucket": "js-part-3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196703684025:android:f6c8f10896df473c",
+        "android_client_info": {
+          "package_name": "com.example.saad.jspart3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196703684025-ak0037pusna7hcuu83t1h7cm1pbis2b1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKirHitq_BZJyhPuaG9sq1EaRaYPHzKsw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

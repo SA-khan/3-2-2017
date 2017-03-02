@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.saad.jspart3.employer_the_job">
+        <LinearLayout
+            android:id="@+id/myactivityTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:weightSum="1">
+            <TextView
+                android:id="@+id/activityHeading"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Employer Job"
+                android:foregroundGravity="center"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:background="#6200EA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myEmployeeApplied"
+            android:layout_below="@id/myactivityTab"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Employees Applied"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/appliedTotal"
+                android:background="@drawable/square"
+                android:text="Total"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:layout_marginRight="20dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/editEmployerJobPosted"
+            android:layout_below="@id/myactivityTab"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:text="Edit Job"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_below="@id/myEmployeeApplied"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Description"
+                    android:background="@color/bg_screen2"
+                    android:textColor="#000000"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobKey"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job ID: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobTitle"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Title: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobDescription"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Description: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobCategory"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Category: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobCompany"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company Name: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobCompanyDomain"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company Domain: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobLocation"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Location: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobCountry"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Country: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobCity"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job City / State: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobCoordinates"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Lat. Long. : "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobCareerLevel"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Career Level: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobQualification"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Qualification: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobInNumbers"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Number Of Positions : "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobSalary"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Salary: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobSkill"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Skills Required: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobExpired"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Expired On: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobMinExperience"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Minimum Experience: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobMaximumExperience"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum Experience: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobDepartment"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Department: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobComment"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comments: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobPostedDate"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Posted Date: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/myEmployerJobPostedThrough"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Posted From: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

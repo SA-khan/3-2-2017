@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.saad.jspart3.userMessages">
+    <LinearLayout
+        android:id="@+id/myactivityTab"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false">
+        <TextView
+            android:id="@+id/activityHeading"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="My Messages"
+            android:foregroundGravity="center"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:background="#6200EA"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/mymessagesall"
+        android:layout_below="@+id/myactivityTab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp">
+
+    </ListView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="Job Seekicious Team KU"/>
+
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="@drawable/bbc3"
+    tools:context="com.example.saad.jspart3.MainActivity">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/js"
+        />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/black2"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/quote2"/>
+
+        <TextView
+            android:id="@+id/quote"
+            android:textStyle="bold"
+            android:gravity="center"
+
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/signin_signup_layout"
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/sign_in_btn"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="100dp"
+            android:text="Sign In"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="24dp"
+            android:textColor="#ffffff"
+            android:background="#6200EA"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:textColor="#6200EA"
+            android:text="SIGN UP"
+            android:textSize="24dp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_gravity="center"
+
+            android:layout_height="16dp"
+            android:src="@drawable/square"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "/>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_gravity="center"
+
+            android:layout_height="16dp"
+            android:src="@drawable/square"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "/>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_gravity="center"
+
+            android:layout_height="16dp"
+            android:src="@drawable/square"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center_horizontal"
+        android:showDividers="middle"
+        android:textAlignment="center"
+
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/searchJob1_btn"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="Search A Job"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/searchJob2_btn"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="_____________"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text=""
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/postJob1_btn"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="  Post A Job"
+            android:textSize="22sp"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/postJob2_btn"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="_____________"
+            android:textSize="22sp"
+            android:textColor="#ffffff"/>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
