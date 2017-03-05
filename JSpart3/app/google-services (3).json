@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1010546745868",
+    "project_id": "focused-ion-159417"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010546745868:android:f6c8f10896df473c",
+        "android_client_info": {
+          "package_name": "com.example.saad.jspart3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010546745868-d1ja258r87g6qaq6n9deu1fnjvdeo42v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.saad.jspart3",
+            "certificate_hash": "a80940d087ba0cb0973bf1bc48a950307d3fd857"
+          }
+        },
+        {
+          "client_id": "1010546745868-s23nd63i5rppirt9fk28ir6qn2k15ud6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUGb-Y9K83xi07nuGAPSO3R-gZqyf02Rk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

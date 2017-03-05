@@ -61,6 +61,33 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/jobCountryList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+        </Spinner>
+        <Spinner
+            android:id="@+id/jobCityList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+        </Spinner>
         <EditText
             android:textSize="20sp"
             android:layout_marginLeft="20dp"
@@ -70,7 +97,8 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
         <EditText
             android:textSize="20sp"
             android:layout_marginLeft="20dp"
@@ -80,7 +108,8 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
         <EditText
             android:id="@+id/state"
             android:hint="State"

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/_signin_scroll_view">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="@color/colorPrimary"
+        app:titleTextColor="#ffffff"
         >
 
     </android.support.v7.widget.Toolbar>
@@ -94,7 +97,7 @@
             android:layout_marginTop="10dp"/>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -103,12 +106,12 @@
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:textStyle="italic"
-                android:text="Having trouble?"/>
+                android:text="Having trouble"/>
             <TextView
                 android:id="@+id/_signinActivityForgetPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Signing In"
+                android:text="Signing In?"
                 android:layout_marginLeft="7dp"
                 android:textSize="18sp"
                 android:textColor="@color/colorPrimaryDark"/>
@@ -117,19 +120,87 @@
 
 
     </LinearLayout>
-    <TextView
+    <LinearLayout
         android:id="@+id/_signinActivityLoginWithGoogle"
         android:layout_below="@id/_signinActivityMainTool"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/common_plus_signin_btn_text_dark_normal"
-        android:text="Sign In with Google"
-        android:textColor="#ffffff"
-        android:gravity="center"
-        android:textSize="18sp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/llProfile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btn_Account"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to my account"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btn_sign_out"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_logout_from_google"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btn_revoke_access"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_revoke_access"
+            android:visibility="gone" />
+
+    </LinearLayout>
     <TextView
+        android:layout_below="@id/_signinActivityLoginWithGoogle"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Job Seekicious Team KU"
@@ -142,7 +213,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/sign"
-        android:visibility="invisible"/>
+        android:visibility="gone"/>
 
 </RelativeLayout>
 </ScrollView>

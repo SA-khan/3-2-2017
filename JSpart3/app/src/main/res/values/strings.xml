@@ -105,6 +105,12 @@
         <item>As Volunteer</item>
         <item>Interview Based</item>
     </string-array>
+
+
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+
     <string name="title_activity_user_profile_activity">user_profile_activity</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"

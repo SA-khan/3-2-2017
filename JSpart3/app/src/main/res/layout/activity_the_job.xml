@@ -6,6 +6,7 @@
     tools:context="com.example.saad.jspart3.the_Job">
 
     <ScrollView
+        android:id="@+id/activity_the_job_scrollbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -16,10 +17,7 @@
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <FrameLayout
-            android:id="@+id/jobSubmitted"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"></FrameLayout>
+
         <LinearLayout
             android:id="@+id/tab1"
             android:layout_width="match_parent"
@@ -407,6 +405,10 @@
     </LinearLayout>
 
     </ScrollView>
+    <RelativeLayout
+        android:id="@+id/jobSubmitted"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
 
 
 

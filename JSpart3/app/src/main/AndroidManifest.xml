@@ -37,7 +37,9 @@
         <activity android:name=".wait" />
         <activity android:name=".JobList" />
         <activity android:name=".the_Job" />
-        <activity android:name=".activity_welcome" android:label="Sign Up" />
+        <activity
+            android:name=".activity_welcome"
+            android:label="Sign Up" />
         <activity android:name=".imgur_activity" />
         <activity
             android:name=".user_profile_activity"
@@ -51,11 +53,14 @@
         <activity android:name=".userCareer" />
         <activity android:name=".ChatActivity" />
         <activity android:name="._chatActivity" />
-        <activity android:name="._signinActivity" />
+        <activity
+            android:name="._signinActivity"
+            android:label="Sign In" />
         <activity
             android:name=".JobSeekicious"
             android:label="@string/title_activity_job_seekicious"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name="._GoogleActivity"></activity>
     </application>
 
 </manifest>

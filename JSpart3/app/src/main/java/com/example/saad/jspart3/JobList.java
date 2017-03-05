@@ -108,12 +108,12 @@ public class JobList extends AppCompatActivity {
         progressDialog.setMessage("Scanning New Vacancies");
         progressDialog.show();
 
-       /* try {
-
+        try {
+            start = 0;
             myAsync async = new myAsync();
             async.execute();
 
-            page1 = (TextView) findViewById(R.id.page1);
+            /*page1 = (TextView) findViewById(R.id.page1);
             page1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -126,9 +126,9 @@ public class JobList extends AppCompatActivity {
                     myAsync async = new myAsync();
                     async.execute();
                 }
-            });
+            });*/
 
-            page2 = (TextView) findViewById(R.id.page2);
+        /*    page2 = (TextView) findViewById(R.id.page2);
             page2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -186,17 +186,18 @@ public class JobList extends AppCompatActivity {
                     myAsync async = new myAsync();
                     async.execute();
                 }
-            });
+            });*/
 
         }
+
         catch (Exception ex){
             finish();
-        }*/
+        }
 
     }
     public String[] getDataFromServer() {
         try {
-            URL url = new URL("http://api.indeed.com/ads/apisearch?publisher=7678773726830322&format=json&q="+title+"&l="+city+"%2C+"+state+"&sort=&radius=&st=&jt=&start="+start+"&limit=&fromage=&filter=&latlong=1&co="+country+"&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2");
+            URL url = new URL("http://api.indeed.com/ads/apisearch?publisher=7678773726830322&format=json&q="+title+"&l="+city+"%2C+"+"&sort=&radius=&st=&jt=&start="+start+"&limit=&fromage=&filter=&latlong=1&co="+country+"&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2");
             //URL url = new URL("http://www.yahoo.com");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.connect();
@@ -210,7 +211,7 @@ public class JobList extends AppCompatActivity {
             while((tempData=br.readLine()) !=null){
                 completedData+=tempData;
             }
-            Log.d("Data From Api","<><><>"+completedData);
+            //Log.d("Data From Api","<><><>"+completedData);
             return parseJSON(completedData);
 
 
@@ -767,8 +768,15 @@ public class JobList extends AppCompatActivity {
         @Override
         protected String[] doInBackground(Void... params) {
 
+            try {
                 String[] metadata = getDataFromServer();
                 return metadata;
+            }
+            catch (Exception ex){
+                Log.d("Exception in do-->>", " "+ex.getMessage().toString());
+                return null;
+            }
+
 
 
         }
@@ -794,11 +802,11 @@ public class JobList extends AppCompatActivity {
                 ListView rootView = (ListView) findViewById(R.id.rootView);
                 //rootView.setAdapter(adapter);
 
-               if (start + 2 > Integer.parseInt(s[7])) {
+/*               if (start + 2 > Integer.parseInt(s[7])) {
                     pageNext.setVisibility(View.GONE);
                 } else {
                     pageNext.setVisibility(View.VISIBLE);
-                }
+                }*/
 
                 rootView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override

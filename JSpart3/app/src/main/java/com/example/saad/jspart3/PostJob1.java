@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.provider.ContactsContract;
+import android.support.design.widget.Snackbar;
 import android.support.v4.util.TimeUtils;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -19,6 +20,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -92,10 +95,23 @@ public class PostJob1 extends AppCompatActivity{
             key = myintent.getStringExtra("email").replace(".", "/");
 
         }
-        catch (Exception ex){}
+        catch (Exception ex){
+
+            /*if (TextUtils.isEmpty(key.toString())) {*/
+                RelativeLayout postjob = (RelativeLayout) findViewById(R.id.postJob_layout);
+                Snackbar.make(getWindow().getDecorView().getRootView(), "First You have to SIGN IN.", Snackbar.LENGTH_INDEFINITE).setAction("Click to Login", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myintent = new Intent(PostJob1.this, _signinActivity.class);
+                        startActivity(myintent);
+                    }
+                }).show();
+           /* }*/
+        }
         Firebase.setAndroidContext(this);
         ref = new Firebase("https://js-part-3.firebaseio.com/Jobs/");
         uRef = new Firebase("https://js-part-3.firebaseio.com/SignUp_Database/"+key+"/");
+
 
         try {
             Firebase data = uRef.child("First_Name");

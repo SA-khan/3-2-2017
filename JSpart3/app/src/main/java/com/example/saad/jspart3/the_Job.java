@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.firebase.client.DataSnapshot;
@@ -78,6 +79,13 @@ public class the_Job extends AppCompatActivity {
     String comment;
     String key;
 
+    ScrollView myscroll;
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +121,8 @@ public class the_Job extends AppCompatActivity {
         getdepartment = (TextView)findViewById(R.id.getdepartment);
         getcomment = (TextView)findViewById(R.id.getcomment);
 
+        myscroll = (ScrollView)findViewById(R.id.activity_the_job_scrollbar);
+
 
         final Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -146,6 +156,8 @@ public class the_Job extends AppCompatActivity {
             comment = (String)b.get("comment");
             key = (String)b.get("email");
 
+            Log.d("data",key);
+
 
         }
 
@@ -176,36 +188,53 @@ public class the_Job extends AppCompatActivity {
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri webpage = Uri.parse(url);
-                Intent intent1 = new Intent(Intent.ACTION_VIEW, webpage);
-                if(intent1.resolveActivity(getPackageManager())!= null){
-                      startActivity(intent1);
+                if(!(key == null)) {
+                    Uri webpage = Uri.parse(url);
+                    Intent intent1 = new Intent(Intent.ACTION_VIEW, webpage);
+                    if (intent1.resolveActivity(getPackageManager()) != null) {
+                        startActivity(intent1);
+                    } else {
+
+                        Firebase jobk = jobRef.child(jobkey);
+                        Firebase emloyerkey = jobk.child("User_Posted");
+                        emloyerkey.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                String value = dataSnapshot.getValue(String.class);
+                                Firebase myentry = ref.child(value.replace(".", "/") + "/Users_Applied/" + jobkey + "/");
+                                Firebase newEntry = myentry.child(key.replace(".", "()"));
+                                newEntry.setValue("true");
+
+                                Firebase myaccount = ref.child(key.replace(".","/"));
+                                Firebase nameOfField = myaccount.child("My_Career");
+                                Firebase addEntry = nameOfField.child(jobkey);
+                                addEntry.setValue("true");
+
+                                the_Job frag = new the_Job();
+                                FragmentJobSubmitted myfragment = new FragmentJobSubmitted();
+                                getSupportFragmentManager().beginTransaction().add(R.id.jobSubmitted, myfragment).addToBackStack("frag").commit();
+                                myscroll.setVisibility(View.GONE);
+
+
+
+
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+
+                            }
+                        });
+                    }
                 }
-                else{
-
-                    Firebase jobk = jobRef.child(jobkey);
-                    Firebase emloyerkey = jobk.child("User_Posted");
-                    emloyerkey.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            String value = dataSnapshot.getValue(String.class);
-                            Firebase myentry = ref.child(value.replace(".","/")+"/Users_Applied/"+jobkey+"/");
-                            Firebase newEntry = myentry.child(key.replace(".","()"));
-                            newEntry.setValue("true");
-                            /*FragmentJobSubmitted myfragment = new FragmentJobSubmitted();
-                            getSupportFragmentManager().beginTransaction().add(R.id.jobSubmitted, myfragment).addToBackStack(null).commit();*/
-
-
-                        }
-
-                        @Override
-                        public void onCancelled(FirebaseError firebaseError) {
-
-                        }
-                    });
+                else {
+                    Intent myintent = new Intent(the_Job.this, _signinActivity.class);
+                    startActivity(myintent);
                 }
             }
         });
+
 
     }
 
